@@ -5,7 +5,7 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
 
-    const sf::VideoMode screenSize = sf::VideoMode(800, 600, 24);
+    const sf::VideoMode screenSize = sf::VideoMode(800, 800, 24);
     sf::RenderWindow window(screenSize, "SFML");
     const float frameRate = 30.0;
     window.setFramerateLimit(frameRate);
@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
     sf::Time timePerFrame = sf::seconds(1.f/frameRate);
 
-    Population pop = Population(800, 600);
+    Population pop = Population(800, 800);
 
     // Main Loop here
     while(window.isOpen())
