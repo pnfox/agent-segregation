@@ -1,6 +1,6 @@
 SHELL = /bin/sh
 CXX = g++
-CFLAGS = -Wall
+CFLAGS = -Wall -std=c++17
 SFML = $(shell pkg-config sfml-graphics --libs)
 
 all: population.o
