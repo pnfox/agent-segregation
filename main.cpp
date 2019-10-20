@@ -17,6 +17,7 @@ int main(int argc, char *argv[]) {
     sf::Time timePerFrame = sf::seconds(1.f/frameRate);
 
     Population pop = Population(800, 800);
+    bool startAgents = false;
 
     // Main Loop here
     while(window.isOpen())
@@ -36,10 +37,29 @@ int main(int argc, char *argv[]) {
                 window.close();
                 break;
             }
+            else if(event.type == sf::Event::KeyPressed)
+            {
+                const sf::Keyboard::Key keycode = event.key.code;
+                if(keycode == sf::Keyboard::Space)
+                {
+                    startAgents = true;
+                }
+            }
         }
 
         window.clear();
 
+        if(startAgents)
+        {
+            // Perform agent calculation
+            for(Person p: pop.population){
+                if(p.getEmpty())
+                    continue;
+                pop.move(p.getIndex());
+            }
+        }
+
+        // Draw population on screen
         for(Person p : pop.population){
             window.draw(p.getBox());
         }
