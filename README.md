@@ -20,7 +20,7 @@ This is not a perfect implementation by any means. It´s not multithreaded, does
 needs to be recompiled everytime parameters are tweaked.
 
 ### Before Simulation
-![Image of Yaktocat](http://pnfox.com/schellingbefore.png)
+![Image of Simulation](https://i.imgur.com/3VPrY1v.png)
 
 ### After Simulation
-![Image of Yaktocat](http://pnfox.com/schelling.png)
+![Image of Simulation](https://i.imgur.com/TwLf2HQ.png)
